@@ -12,6 +12,9 @@ int led_state = 0; // Current state of the LED: 0 => off; 1 => on.
 // const int SENSOR_PIN = A0; // Moisture sensor (wire wrapped around a couple nails).
 const int SENSOR_PIN = A1; // I broke off part of the wire I plugged into A0!
 
+// Note that if you have nothing connected to an input pin it will be in a floating state
+// and generate random-looking values when you read it.
+
 int moisture_level = 0; // The moisture level detected on the sensor pin.
 
 char buffer[120] = ""; // Line buffer.
