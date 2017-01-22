@@ -1,14 +1,20 @@
+// Globals.
+const int LED_PIN = 13; // Our blue LED connected to digital pin 13.
+
+// Does any one-time init before the main loop runs.
 void setup() {
-	/*This is called when the program starts. It
-	basically sets up the board. Put any initialization
-	code here.*/
+  pinMode(LED_PIN, OUTPUT); // Set the digital pin to output mode.
 }
 
-
+// Monitors moisture sensor and updates LED forever until Arduino is powered off or catastrophically fails.
 void loop() {
-	/*This is where your main code goes. This function
-	loops over and over, and allows you to respond to
-	input from your sensors. It only stops running when
-	the board is switched off*/
+  // Test blinking the LED.
+  digitalWrite(LED_PIN, HIGH);   
+  delay(1000);                  
+  digitalWrite(LED_PIN, LOW);    
+  delay(1000);                  
 }
+
+
+
 
